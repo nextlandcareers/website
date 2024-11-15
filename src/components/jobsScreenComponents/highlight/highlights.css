@@ -1,0 +1,79 @@
+.jobsScreen__heighlights {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.jobsScreen__heighlights__image {
+  width: 24px;
+  height: 24px;
+}
+
+.highlights__img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.heighlights__text {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.highlights__header {
+  font-size: 13px;
+  line-height: 16px;
+  font-weight: 400;
+}
+
+.highlights__desc {
+  font-size: 13px;
+  line-height: 16px;
+  font-weight: 700;
+}
+
+@media (max-width: 965px) {
+  .highlights__header {
+    font-size: 13px;
+    line-height: 15px;
+  }
+
+  .highlights__desc {
+    font-size: 14px;
+    line-height: 15px;
+  }
+}
+
+@media (max-width: 810px) {
+  .highlights__header {
+    font-size: 12px;
+    line-height: 14px;
+  }
+
+  .highlights__desc {
+    font-size: 13px;
+    line-height: 14px;
+  }
+}
+
+@media (max-width: 742px) {
+  .jobsScreen__heighlights__image {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@media (max-width: 640px) {
+  .highlights__header {
+    font-size: 10px;
+    line-height: 14px;
+  }
+
+  .highlights__desc {
+    font-size: 12px;
+    line-height: 14px;
+  }
+}

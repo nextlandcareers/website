@@ -1,0 +1,56 @@
+.goog-te-banner-frame.skiptranslate {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+.goog-te-gadget-icon {
+  display: none !important;
+}
+
+body {
+  top: 0px !important;
+}
+
+iframe[id^=":"] {
+  display: none !important;
+}
+
+.goog-te-gadget {
+  font-size: 0px !important;
+}
+
+.goog-te-combo {
+  background-color: transparent;
+  color: white;
+  width: 155px;
+  height: 25px;
+  font-size: 14px;
+  line-height: 14px;
+}
+
+.goog-te-combo option {
+  color: black !important;
+}
+
+#google_translate_element img {
+  display: none !important;
+}
+
+#google_translate_element a {
+  display: none !important;
+}
+
+@media (max-width: 464px) {
+  .goog-te-combo {
+    width: 130px;
+    font-size: 12px;
+    line-height: 12px;
+  }
+}
+
+@media (max-width: 398px) {
+  .goog-te-combo {
+    width: 105px;
+    font-size: 11px;
+  }
+}

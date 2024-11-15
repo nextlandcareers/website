@@ -1,0 +1,17 @@
+.terms_and_conditions_description_middle_text_container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.terms_and_conditions_description_middle_header {
+  font-size: 20px;
+  line-height: 22px;
+  font-weight: 700;
+}
+
+.terms_and_conditions_description_middle_description {
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 400;
+}

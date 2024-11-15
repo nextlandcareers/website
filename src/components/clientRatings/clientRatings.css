@@ -1,0 +1,110 @@
+.ratingsContainer {
+  height: 441px;
+  background-color: #1a1a1a;
+  border-radius: 40px;
+  margin-left: 3%;
+  margin-right: 3%;
+  margin-top: 120px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ratingsHeader {
+  position: absolute;
+  width: 75%;
+  height: 98px;
+  background: linear-gradient(to right, #26154b, #6066ff);
+  top: -10%;
+  left: 12.5%;
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+  font-weight: 400;
+  gap: 10px;
+}
+
+.span {
+  font-weight: 800;
+}
+
+.ratingNextIcon {
+  position: absolute;
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  background-color: #000000;
+  bottom: -34px;
+  cursor: pointer;
+}
+
+.ratingNextIcon:hover {
+  opacity: 0.9;
+}
+
+.nextImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.ratingCardContainer {
+  width: 95%;
+  height: 300px;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 1036px) {
+  .ratingCardContainer {
+    flex-direction: column;
+    height: auto;
+    margin: 50px;
+  }
+
+  .ratingsContainer {
+    height: auto;
+  }
+
+  .ratingsHeader {
+    top: -3%;
+  }
+}
+
+@media (max-width: 950px) {
+  .ratingsHeader {
+    flex-direction: column;
+    gap: 0;
+    font-size: 30px;
+    font-weight: 300;
+  }
+
+  .span {
+    font-weight: 700;
+  }
+}
+
+@media (max-width: 490px) {
+  .ratingsHeader {
+    font-size: 25px;
+  }
+
+  .span {
+    font-weight: 600;
+  }
+}
+
+@media (max-width: 370px) {
+  .ratingsHeader {
+    font-size: 20px;
+  }
+}

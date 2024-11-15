@@ -1,0 +1,269 @@
+.jobsScreen__main__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.jobsScreen__linearGradient__bottom {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.13), rgba(0, 0, 0, 1));
+  z-index: 1;
+}
+
+.jobsScreen__radialGradient__rightCorner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    circle at top right,
+    rgba(96, 102, 255, 1),
+    rgba(35, 37, 93, 0.64) 36%,
+    rgba(0, 0, 0, 1) 100%
+  );
+  z-index: 2;
+}
+
+.jobsScreen__linerGradient__left {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7));
+  z-index: 3;
+}
+
+.jobsScreen__main__jobs__container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  gap: 50px;
+  padding-top: 25vh;
+  position: relative;
+  z-index: 10;
+}
+
+.jobsScreen__main__header {
+  font-size: 48px;
+  line-height: 50px;
+  font-weight: 800;
+}
+
+.jobsScreen__jobs__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  width: 55%;
+}
+
+.jobsScreen__placed__container {
+  width: 100%;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: #0f0f0f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: auto;
+  position: relative;
+  z-index: 1;
+}
+
+.jobsScreen__placed__details__container {
+  width: 60%;
+  height: 418px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
+
+.placed__img__container {
+  width: 50%;
+  height: 100%;
+}
+
+.placed__img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.placed__desc__container {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  padding-left: 30px;
+  padding-right: 20px;
+}
+
+.placed__text {
+  font-size: 40px;
+  line-height: 44px;
+}
+
+.placed__bold {
+  font-weight: 700;
+}
+
+.placed__thin {
+  font-weight: 400;
+}
+
+@media (max-width: 1145px) {
+  .jobsScreen__placed__details__container {
+    width: 70%;
+    height: 380px;
+  }
+
+  .placed__desc__container {
+    width: 55%;
+    padding-left: 30px;
+    padding-right: 10px;
+  }
+
+  .placed__text {
+    font-size: 38px;
+    line-height: 43px;
+  }
+
+  .jobsScreen__jobs__container {
+    width: 70%;
+  }
+}
+
+@media (max-width: 965px) {
+  .placed__text {
+    font-size: 32px;
+    line-height: 42px;
+  }
+}
+
+@media (max-width: 876px) {
+  .jobsScreen__jobs__container {
+    width: 75%;
+  }
+
+  .placed__text {
+    font-size: 28px;
+    line-height: 40px;
+  }
+
+  .jobsScreen__placed__container {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .jobsScreen__placed__details__container {
+    width: 80%;
+    height: 350px;
+  }
+}
+
+@media (max-width: 742px) {
+  .jobsScreen__jobs__container {
+    width: 80%;
+  }
+}
+
+@media (max-width: 695px) {
+  .jobsScreen__jobs__container {
+    width: 85%;
+  }
+
+  .jobsScreen__placed__container {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .jobsScreen__placed__details__container {
+    width: 90%;
+    height: 350px;
+  }
+}
+
+@media (max-width: 635px) {
+  .jobsScreen__jobs__container {
+    width: 90%;
+  }
+}
+
+@media (max-width: 590px) {
+  .jobsScreen__placed__details__container {
+    width: 90%;
+    height: auto;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
+
+  .placed__desc__container {
+    width: 80%;
+  }
+  
+  .placed__text {
+    font-size: 38px;
+    line-height: 44px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 500px) {
+  .jobsScreen__main__header {
+    font-size: 44px;
+    line-height: 47px;
+  }
+}
+
+@media (max-width: 475px) {
+  .placed__text {
+    font-size: 30px;
+    line-height: 40px;
+  }
+}
+
+@media (max-width: 445px) {
+  .jobsScreen__main__header {
+    font-size: 41px;
+    line-height: 44px;
+  }
+}
+
+@media (max-width: 390px) {
+  .jobsScreen__main__header {
+    font-size: 35px;
+    line-height: 42px;
+  }
+
+  .placed__text {
+    font-size: 25px;
+    line-height: 30px;
+  }
+}
+
+@media (max-width: 362px) {
+  .jobsScreen__main__header {
+    font-size: 30px;
+    line-height: 38px;
+  }
+}

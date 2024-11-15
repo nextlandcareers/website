@@ -1,0 +1,214 @@
+.clientScreen__client__border_gradient {
+  height: 220px;
+  background: radial-gradient(
+    at top right,
+    rgba(96, 102, 255, 1),
+    rgba(0, 0, 0, 0)
+  );
+  border-radius: 28px;
+  padding: 15px;
+}
+
+.clientScreen__inside__gradient {
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(to right, #5358d6, #1e2054);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.clientScreen__client__logo {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  width: 50%;
+  padding-right: 40px;
+}
+
+.clientScreen__logo {
+  height: 47px;
+  object-fit: contain;
+}
+
+.clientScreen__client__details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  height: 90%;
+  width: 50%;
+  margin-left: 30px;
+}
+
+.clientScreen__client__header {
+  font-size: 30px;
+  line-height: 32px;
+  font-weight: 700;
+}
+
+.clientScreen__client__description {
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 400;
+  width: 75%;
+}
+
+.clientScreen__client__details__seperator {
+  width: 4px;
+  height: 75%;
+  border-radius: 20px;
+  background: linear-gradient(to right, #5358d6 3%, #1e2054);
+}
+
+@media (max-width: 1056px) {
+  .clientScreen__logo {
+    height: 40px;
+  }
+
+  .clientScreen__client__header {
+    font-size: 28px;
+    line-height: 30px;
+  }
+
+  .clientScreen__client__description {
+    font-size: 12px;
+    line-height: 16px;
+    width: 85%;
+  }
+}
+
+@media (max-width: 888px) {
+  .clientScreen__logo {
+    height: 35px;
+  }
+
+  .clientScreen__client__header {
+    font-size: 25px;
+    line-height: 28px;
+  }
+
+  .clientScreen__client__description {
+    font-size: 12px;
+    line-height: 14px;
+    width: 90%;
+  }
+}
+
+@media (max-width: 754px) {
+  .clientScreen__logo {
+    height: 30px;
+  }
+
+  .clientScreen__client__header {
+    font-size: 23px;
+    line-height: 25px;
+  }
+
+  .clientScreen__client__description {
+    font-size: 11px;
+    line-height: 14px;
+    width: 100%;
+  }
+
+  .clientScreen__client__details {
+    gap: 10px;
+    margin-left: 20px;
+  }
+}
+
+@media (max-width: 630px) {
+  .clientScreen__client__header {
+    font-size: 20px;
+    line-height: 25px;
+  }
+
+  .clientScreen__client__description {
+    font-size: 11px;
+    line-height: 12px;
+  }
+
+  .clientScreen__client__details {
+    gap: 8px;
+  }
+}
+
+@media (max-width: 590px) {
+  .clientScreen__inside__gradient {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .clientScreen__client__details__seperator {
+    height: 85%;
+  }
+
+  .clientScreen__client__header {
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  .clientScreen__client__description {
+    font-size: 11px;
+    line-height: 11px;
+  }
+
+  .clientScreen__client__details {
+    gap: 6px;
+  }
+}
+
+@media (max-width: 470px) {
+  .clientScreen__client__border_gradient {
+    height: auto;
+    padding: 10px;
+  }
+
+  .clientScreen__inside__gradient {
+    flex-direction: column;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .clientScreen__client__logo {
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 40%;
+    padding-right: 0;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .clientScreen__client__details__seperator {
+    width: 85%;
+    height: 4px;
+    background: linear-gradient(to bottom, #5358d6 3%, #1e2054);
+  }
+
+  .clientScreen__client__details {
+    align-items: center;
+    margin-left: 0px;
+    width: 100%;
+    gap: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .clientScreen__client__header {
+    font-size: 25px;
+    line-height: 30px;
+    font-weight: 700;
+  }
+  
+  .clientScreen__client__description {
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 300;
+    width: 90%;
+    text-align: center;
+  }
+}

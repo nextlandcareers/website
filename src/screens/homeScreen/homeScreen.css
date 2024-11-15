@@ -1,0 +1,379 @@
+.image-container {
+  position: relative;
+  height: 100vh;
+}
+
+.main-image {
+  width: 100%;
+  height: 100%; 
+}
+
+.gradient-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.5));
+  pointer-events: none;
+}
+
+.text-overlay {
+  position: absolute;
+  top: 30%;
+  left: 3%;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.mainTextContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.thinnerText {
+  font-size: 50px;
+  font-weight: 300;
+}
+
+.bolderText {
+  font-size: 60px;
+  font-weight: 900;
+}
+
+.gradientContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+}
+
+.gradient {
+  background: linear-gradient(to right, #26154b, #6066ff);
+  border-radius: 15px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.subTextContainer {
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+}
+
+.subSubTextContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+}
+
+.mainSubText {
+  font-weight: 700;
+}
+
+.setcorTextContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  width: 100%;
+  justify-content: center;
+}
+
+.topText {
+  color: white;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.sectorText {
+  color: #6066ff;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.trustedTextContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  width: 100%;
+  justify-content: center;
+}
+
+.trustedTopText {
+  color: white;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.trustedSubText {
+  color: #6066ff;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.sectorContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 3%;
+  margin-right: 3%;
+  gap: 10px;
+}
+
+.contactImgContainer {
+  margin-left: 3%;
+  margin-right: 3%;
+  height: 380px;
+  display: flex;
+  position: relative;
+}
+
+.contactImgContainer img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 40px;
+}
+
+.gradientOverlayContact {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3));
+  border-radius: 40px;
+}
+
+.contactTextContainer {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  color: white;
+  left: 3%;
+  top: 35%;
+}
+
+.contactText {
+  display: flex;
+  flex-direction: column;
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.servicesContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-left: 3%;
+  margin-right: 3%;
+  gap: 10px;
+}
+
+.trustedByContainer {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.reviewContainer {
+  margin-bottom: 80px;
+}
+
+@media (max-width: 962px) {
+  .image-container {
+    height: auto;
+  }
+  .thinnerText {
+    font-size: 40px;
+    font-weight: 300;
+  }
+
+  .bolderText {
+    font-size: 50px;
+    font-weight: 900;
+  }
+
+  .mainSubText {
+    font-weight: 600;
+  }
+
+  .sectorContainer {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+}
+
+@media (max-width: 810px) {
+  .thinnerText {
+    font-size: 30px;
+  }
+
+  .bolderText {
+    font-size: 40px;
+  }
+
+  .mainSubText {
+    font-weight: 600;
+  }
+
+  .subTextContainer {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 800px) {
+  .servicesContainer {
+    flex-direction: column;
+    align-items: center;
+    margin-left: 3%;
+    margin-right: 3%;
+    gap: 30px;
+  }
+}
+
+@media (max-width: 675px) {
+  .thinnerText {
+    font-size: 30px;
+  }
+
+  .bolderText {
+    font-size: 35px;
+  }
+
+  .mainSubText {
+    font-weight: 700;
+  }
+
+  .text-overlay {
+    left: 7%;
+    top: 30%;
+    gap: 20px;
+  }
+
+  .subTextContainer {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 520px) {
+  .thinnerText {
+    font-size: 30px;
+  }
+
+  .bolderText {
+    font-size: 35px;
+  }
+
+  .mainSubText {
+    font-weight: 700;
+  }
+
+  .text-overlay {
+    left: 7%;
+    top: 47%;
+    gap: 20px;
+  }
+
+  .subTextContainer {
+    font-size: 15px;
+  }
+
+  .main-image {
+    height: 55vh;
+  }
+}
+
+@media (max-width: 490px) {
+  .trustedTextContainer {
+    gap: 0.2rem;
+  }
+
+  .trustedTopText {
+    font-size: 25px;
+    font-weight: 600;
+  }
+
+  .trustedSubText {
+    font-size: 25px;
+    font-weight: 600;
+  }
+
+  .contactTextContainer {
+    top: 40%;
+  }
+
+  .contactText {
+    font-size: 31px;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 478px) {
+  .thinnerText {
+    font-size: 25px;
+  }
+
+  .bolderText {
+    font-size: 30px;
+  }
+
+  .mainSubText {
+    font-weight: 600;
+  }
+
+  .text-overlay {
+    top: 50%;
+    gap: 10px;
+  }
+
+  .subTextContainer {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 390px) {
+  .thinnerText {
+    font-size: 20px;
+  }
+
+  .bolderText {
+    font-size: 25px;
+  }
+
+  .mainSubText {
+    font-weight: 600;
+  }
+
+  .text-overlay {
+    top: 50%;
+    gap: 10px;
+  }
+
+  .subTextContainer {
+    font-size: 15px;
+  }
+
+  .contactText {
+    font-size: 27px;
+    margin-bottom: 10px;
+  } 
+
+  .trustedTextContainer {
+    flex-direction: column;
+  }
+}

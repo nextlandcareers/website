@@ -4,8 +4,11 @@ import Phone from "../../assets/phoneIcon.png";
 import Mail from "../../assets/mailIcon.png";
 import Question from "../../components/conatctUsScreenComponents/question/Question";
 import { useCallback } from "react";
+import { useTranslation } from "react-i18next";
 
 const ContactScreen = () => {
+  const { t } = useTranslation();
+
   const handleLetsTalkButtonClick = () => {
     const mailtoLink = "mailto:contact@nextlandcareers.com";
     window.open(mailtoLink, "_blank");
@@ -33,11 +36,8 @@ const ContactScreen = () => {
       <div className="contactMainContainer">
         <div className="contactGradientContainer">
           <div className="heading__Container plus-jakarta">
-            <div className="headerContainer">Get in touch</div>
-            <div className="subHeaderContainer">
-              We'd love to hear from you! Contact us today for any inquiries or
-              support
-            </div>
+            <div className="headerContainer">{t("contactHead")}</div>
+            <div className="subHeaderContainer">{t("contactSubHead")}</div>
           </div>
 
           <div className="contactUs_imageContainer">
@@ -83,61 +83,19 @@ const ContactScreen = () => {
       </div>
 
       <div className="questions_container plus-jakarta">
-        <div className="ques_header_container">Have any questions?</div>
+        <div className="ques_header_container">{t("contactQuesHead")}</div>
         <div className="question_items_container">
           <div className="half_items_container">
-            <Question
-              question={"How does NLC help you in processing ?"}
-              answer={
-                "We will be coordinating the end-to-end process for you without letting you know any hassles."
-              }
-            />
-            <Question
-              question={"Does NLC provide any other trainings ?"}
-              answer={
-                "We provide necessary language & skill based training for our candidates."
-              }
-            />
-            <Question
-              question={"How to get a job abroad ?"}
-              answer={
-                "You can contact us and we will evaluate your profile and help you accordingly."
-              }
-            />
-            <Question
-              question={"Is there any initial processing fee involved ?"}
-              answer={
-                "We don't charge any initial processing fee from our candidates."
-              }
-            />
+            <Question question={t("contactQues1")} answer={t("contactAns1")} />
+            <Question question={t("contactQues2")} answer={t("contactAns2")} />
+            <Question question={t("contactQues3")} answer={t("contactAns3")} />
+            <Question question={t("contactQues4")} answer={t("contactAns4")} />
           </div>
           <div className="half_items_container">
-            <Question
-              question={"Can we visit the office ?"}
-              answer={
-                "You are welcome to visit our office during the office hours."
-              }
-            />
-            <Question
-              question={"Do we get refund if visa is not granted ?"}
-              answer={
-                "NLC won't be charging you any fee if visa is not granted."
-              }
-            />
-            <Question
-              question={"Do we need valid prior experience ?"}
-              answer={
-                "It depends upon the job openings which are present."
-              }
-            />
-            <Question
-              question={
-                "Do you conduct interview drives in collaboration with the companies ?"
-              }
-              answer={
-                "Yes, we do conduct such drives to hire talented workers as soon as we can."
-              }
-            />
+            <Question question={t("contactQues5")} answer={t("contactAns5")} />
+            <Question question={t("contactQues6")} answer={t("contactAns6")} />
+            <Question question={t("contactQues7")} answer={t("contactAns7")} />
+            <Question question={t("contactQues8")} answer={t("contactAns8")} />
           </div>
         </div>
       </div>

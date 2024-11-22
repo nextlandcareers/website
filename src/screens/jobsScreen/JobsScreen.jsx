@@ -7,13 +7,16 @@ import JobImg5 from "../../assets/pipe (1).jpg";
 import JobImg6 from "../../assets/welder (1).jpg";
 import PlacedImg from "../../assets/placed__img.png";
 import Job from "../../components/jobsScreenComponents/job/Job";
+import { useTranslation } from "react-i18next";
 
 const JobsScreen = () => {
+  const { t } = useTranslation();
+
   const jobs = [
     {
       image: JobImg2,
-      header: "Mechanical Engineers",
-      desc: "If you have over 3 years of experience in mechanical engineering and a strong background in the field, this could be the perfect opportunity for you.",
+      header: t("jobHeader1"),
+      desc: t("jobDesc1"),
       exp: "3 Years +",
       cntry: "Germany",
       edu: "Engineering Degree",
@@ -21,8 +24,8 @@ const JobsScreen = () => {
     },
     {
       image: JobImg1,
-      header: "Electrical Engineers",
-      desc: "With 3+ years of hands-on experience in electrical engineering, your expertise is exactly what we're looking for.",
+      header: t("jobHeader2"),
+      desc: t("jobDesc2"),
       exp: "3 Years +",
       cntry: "Germany",
       edu: "Engineering Degree",
@@ -30,8 +33,8 @@ const JobsScreen = () => {
     },
     {
       image: JobImg3,
-      header: "Bakery & Confectionery",
-      desc: "Got 2+ years of experience in bakery and confectionery? This is your chance to showcase your skills and grow your career.",
+      header: t("jobHeader3"),
+      desc: t("jobDesc3"),
       exp: "2 Years +",
       cntry: "Germany",
       edu: "Bsc in Hotel Management",
@@ -39,8 +42,8 @@ const JobsScreen = () => {
     },
     {
       image: JobImg4,
-      header: "Maintenance Technicians",
-      desc: "For those with 5+ years of experience in maintenance techniques, this role offers a great opportunity to apply your knowledge.",
+      header: t("jobHeader4"),
+      desc: t("jobDesc4"),
       exp: "5 Years +",
       cntry: "Germany ",
       edu: "Dipolma / Deg in Mechanical Engineering",
@@ -48,8 +51,8 @@ const JobsScreen = () => {
     },
     {
       image: JobImg5,
-      header: "Pipe Fabricator",
-      desc: "Experienced in pipe fabrication? Your skills could be the ideal fit for this exciting opportunity.",
+      header: t("jobHeader5"),
+      desc: t("jobDesc5"),
       exp: "5 Years +",
       cntry: "Germany & Hungary",
       edu: "Dipolma / Deg in Mechanical Engineering",
@@ -57,8 +60,8 @@ const JobsScreen = () => {
     },
     {
       image: JobImg6,
-      header: "Welder - MIG/TIG & ARC",
-      desc: "With specialized expertise in MIG/TIG & ARC welding, this position is tailor-made for someone with your level of skill.",
+      header: t("jobHeader6"),
+      desc: t("jobDesc6"),
       exp: "5 Years +",
       cntry: "Germany & Hungary",
       edu: "Dipolma / Deg in Mechanical Engineering",
@@ -100,10 +103,10 @@ const JobsScreen = () => {
               </div>
               <div className="placed__desc__container plus-jakarta">
                 <div className="placed__text placed__bold">
-                  We have successfully placed{" "}
+                  {t("jobCaption1")}
                 </div>
                 <div className="placed__text placed__thin">
-                  multiple candidates across europe.
+                  {t("jobCaption2")}
                 </div>
               </div>
             </div>

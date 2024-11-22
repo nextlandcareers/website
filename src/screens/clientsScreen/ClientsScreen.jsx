@@ -8,14 +8,16 @@ import ClientLogo6 from "../../assets/trusted(5.1).png";
 import ClientLogo7 from "../../assets/trusted(6.1).png";
 import ClientLogo8 from "../../assets/trusted (7.1).png";
 import ClientLogo9 from "../../assets/trusted (8.1).png";
+import { useTranslation } from "react-i18next";
 
 const ClientsScreen = () => {
+  const { t } = useTranslation();
+
   const clients = [
     {
       image: ClientLogo4,
       header: "ROM",
-      description:
-        "ROM Technik is a German leader in the planning, construction and maintenance of technical building equipment. We support and optimize the entire life cycle of a building.",
+      description: t("clientDesc1"),
       style: {
         height: "63px",
       },
@@ -23,8 +25,7 @@ const ClientsScreen = () => {
     {
       image: ClientLogo2,
       header: "HOFFMEIER",
-      description:
-        "We are your partner when it comes to planning, production and assembly of complex industrial plants. Our service is available to you for maintenance, revisions, conversions and dismantling. As a specialist and all-rounder, we offer you everything from a single source.",
+      description: t("clientDesc2"),
       style: {
         height: "48px",
       },
@@ -32,8 +33,7 @@ const ClientsScreen = () => {
     {
       image: ClientLogo3,
       header: "Wibbelt",
-      description:
-        "Engineering, Repair & Service for Air and Flue Gas Technology Located in Eastern Münsterland, We Have Offered Quality and Expertise for More Than 40 Years. Our Engineering and Implementation Services Cover Most of the European Continent.",
+      description: t("clientDesc3"),
       style: {
         height: "46px",
       },
@@ -41,8 +41,7 @@ const ClientsScreen = () => {
     {
       image: ClientLogo5,
       header: "YOUNCHANG",
-      description:
-        "We are a leading global industrial gases and engineering company, serving a variety of end markets such as chemicals and energy, food and beverages, electronics, healthcare, manufacturing, metals and mining.",
+      description: t("clientDesc4"),
       style: {
         height: "37px",
       },
@@ -50,8 +49,7 @@ const ClientsScreen = () => {
     {
       image: ClientLogo6,
       header: "ISM",
-      description:
-        "ISM is your reliable partner offering any complex services for any player in the industry, be it industrial assembly work, pipe installation, the production of steel structures or their installation.",
+      description: t("clientDesc5"),
       style: {
         height: "32px",
       },
@@ -59,8 +57,7 @@ const ClientsScreen = () => {
     {
       image: ClientLogo7,
       header: "MSB",
-      description:
-        "We are your experts in the fields of industry, railroad technology, renewable energies and automation technology. Our customers value our innovative and customized solutions, as well as the high quality and reliability of our products.",
+      description: t("clientDesc6"),
       style: {
         height: "90px",
       },
@@ -68,8 +65,7 @@ const ClientsScreen = () => {
     {
       image: ClientLogo9,
       header: "Formenza Kft.",
-      description:
-        "Formenza Kft. is a pioneer in food manufacturing, after decades of experience in the meat industry. we are a leading  factory workforce supplier with operations in several large meat production and food packaging companies in Germany.",
+      description: t("clientDesc7"),
       style: {
         height: "66px",
       },
@@ -77,8 +73,7 @@ const ClientsScreen = () => {
     {
       image: ClientLogo8,
       header: "Miczo Kft.",
-      description:
-        "Miczo Kft. developed into a successful European enterprise in the last years and offers Installation, Maintenance, review, repair work in building units of power plants and cement factories, installation works of existing power plants and cement factories. We are also pioneers in Fabrication and installation of steel structures.",
+      description: t("clientDesc8"),
       style: {
         height: "90px",
       },
@@ -92,7 +87,7 @@ const ClientsScreen = () => {
         <div className="clientScreen__liner__gradient__toRight"></div>
 
         <div className="clientScreen__items__container plus-jakarta">
-          <div className="clientScreen__header">Our Clients</div>
+          <div className="clientScreen__header">{t("clientHead")}</div>
 
           <div className="clientScreen__clients__container">
             {clients.map((client, index) => (

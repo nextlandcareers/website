@@ -19,8 +19,11 @@ import Service3 from "../../assets/service3.png";
 import Service4 from "../../assets/service4.png";
 import Service5 from "../../assets/service5.png";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 const HomeScreen = () => {
+  const { t } = useTranslation();
+
   useEffect(() => {
     if (!sessionStorage.getItem("firstLoad")) {
       sessionStorage.setItem("firstLoad", "true");
@@ -31,13 +34,13 @@ const HomeScreen = () => {
       sessionStorage.removeItem("firstLoad");
     };
   }, []);
-  
+
   const serviceItems = [
-    { image: Service1, text: "Direct Job Application" },
-    { image: Service2, text: "Skill Enhancement Training" },
-    { image: Service3, text: "Language Training" },
-    { image: Service4, text: "Visa Assistance" },
-    { image: Service5, text: "Accommodation Assistance" },
+    { image: Service1, text: t("service1") },
+    { image: Service2, text: t("service2") },
+    { image: Service3, text: t("service3") },
+    { image: Service4, text: t("service4") },
+    { image: Service5, text: t("service5") },
   ];
 
   const ratingItems = [
@@ -74,21 +77,21 @@ const HomeScreen = () => {
         <div className="gradient-overlay"></div>
         <div className="text-overlay">
           <div className="mainTextContainer">
-            <h1 className="thinnerText">WORK IN</h1>
-            <h1 className="bolderText">TOP EUROPEAN</h1>
+            <h1 className="thinnerText">{t("welcome")}</h1>
+            <h1 className="bolderText">{t("head2")}</h1>
             <div className="gradientContainer">
-              <h1 className="bolderText">COMPANIES</h1>
+              <h1 className="bolderText">{t("head3")}</h1>
               <div className="gradient">
-                <h1 className="bolderText">VIA US</h1>
+                <h1 className="bolderText">{t("head4")}</h1>
               </div>
             </div>
           </div>
           <div className="subTextContainer plus-jakarta">
             <div className="subSubTextContainer">
-              <div className="mainSubText">We help you</div>
-              <div>empower your</div>
+              <div className="mainSubText">{t("subHead1")}</div>
+              <div>{t("subHead2")}</div>
             </div>
-            <div>career to new heights.</div>
+            <div>{t("subHead3")}</div>
           </div>
         </div>
       </div>
@@ -100,18 +103,15 @@ const HomeScreen = () => {
       </div>
 
       <div className="sectorContainer mb-12">
-        <Sector
-          image={Sector1}
-          text={"Mechanical, Electrical and Automotive"}
-        />
-        <Sector image={Sector2} text={"Civil Construction"} />
-        <Sector image={Sector3} text={"Restaurants"} />
+        <Sector image={Sector1} text={t("sector1")} />
+        <Sector image={Sector2} text={t("sector2")} />
+        <Sector image={Sector3} text={t("sector3")} />
       </div>
 
       <div className="sectorContainer mb-24">
-        <Sector image={Sector4} text={"Manufacturing"} />
-        <Sector image={Sector5} text={"Food Processing"} />
-        <Sector image={Sector6} text={"Health Care"} />
+        <Sector image={Sector4} text={t("sector4")} />
+        <Sector image={Sector5} text={t("sector5")} />
+        <Sector image={Sector6} text={t("sector6")} />
       </div>
 
       {/* Contact */}
@@ -120,8 +120,8 @@ const HomeScreen = () => {
         <div className="gradientOverlayContact"></div>
         <div className="contactTextContainer">
           <div className="contactText">
-            <div className="plus-jakarta ">Start a career abroad in</div>
-            <div className="plus-jakarta ">your dream country.</div>
+            <div className="plus-jakarta ">{t("contact1")}</div>
+            <div className="plus-jakarta ">{t("contact2")}</div>
           </div>
 
           <Link to="/contact">

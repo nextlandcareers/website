@@ -4,12 +4,16 @@ import { useEffect, useState } from "react";
 import Translate from "../translate/Translate";
 import TranslateImage from "../../assets/translate.png";
 import "./navbar.css";
+import "../../i18n";
+import { useTranslation } from "react-i18next";
 
 const Navbar = () => {
   const location = useLocation();
   const [activeLink, setActiveLink] = useState(location.pathname);
   const [isScrolled, setIsScrolled] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
+
+  const { t, i18n } = useTranslation();
 
   useEffect(() => {
     setActiveLink(location.pathname);
@@ -29,6 +33,10 @@ const Navbar = () => {
   }, [location]);
 
   const navigate = useNavigate();
+
+  const changeLanguage = (lang) => {
+    i18n.changeLanguage(lang);
+  };
 
   const items = [
     { name: "HOME PAGE", path: "/" },
@@ -61,7 +69,11 @@ const Navbar = () => {
       <div className="w-full flex flex-wrap items-center justify-between px-10 py-7">
         <Link to="/">
           <div>
-            <img src={NLClogo} alt="NLC_logo" className="w-[117px] h-[70px] nlc_logo_image_container" />
+            <img
+              src={NLClogo}
+              alt="NLC_logo"
+              className="w-[117px] h-[70px] nlc_logo_image_container"
+            />
           </div>
         </Link>
 
@@ -90,7 +102,29 @@ const Navbar = () => {
                 className="google_translate_image"
               />
             </div>
-            <Translate />
+            {/* <Translate /> */}
+            <select
+              onClick={(e) => changeLanguage(e.target.value)}
+              className="custom-select"
+              style={{
+                width: "100%",
+                backgroundColor: "transparent",
+                color: "white",
+              }}
+            >
+              <option style={{ color: "black" }} value="en">
+                English
+              </option>
+              <option style={{ color: "black" }} value="hn">
+                Hungarian
+              </option>
+              <option style={{ color: "black" }} value="gr">
+                Deutsch
+              </option>
+              <option style={{ color: "black" }} value="sl">
+                Slovak
+              </option>
+            </select>
           </div>
 
           <button className="navbar-toggle" onClick={toggleMenu}>

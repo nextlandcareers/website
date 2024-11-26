@@ -43,6 +43,32 @@
   margin-right: 5px;
 }
 
+.languagesContainer {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.language {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  height: 20px;
+  cursor: pointer;
+  color: white;
+}
+
+.language:hover {
+  color: #6066ff;
+  font-weight: 700;
+}
+
+.language.active {
+  color: #6066ff;
+  font-weight: 700;
+}
+
 @media (min-width: 1119px) {
   .navbar-items {
     display: flex;

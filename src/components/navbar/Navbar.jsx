@@ -12,6 +12,7 @@ const Navbar = () => {
   const [activeLink, setActiveLink] = useState(location.pathname);
   const [isScrolled, setIsScrolled] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
+  const [language, setLanguage] = useState("en");
 
   const { t, i18n } = useTranslation();
 
@@ -47,6 +48,13 @@ const Navbar = () => {
     { name: "CONTACT US", path: "/contact" },
   ];
 
+  const languages = [
+    { name: "EN", value: "en" },
+    { name: "HU", value: "hn" },
+    { name: "DE", value: "gr" },
+    { name: "SL", value: "sl" },
+  ];
+
   const handleScroll = () => {
     window.scrollY > 100 ? setIsScrolled(true) : setIsScrolled(false);
   };
@@ -77,6 +85,24 @@ const Navbar = () => {
           </div>
         </Link>
 
+        <div className="languagesContainer">
+          {languages.map((item, index) => (
+            <div
+              key={index}
+              onClick={() => {
+                setLanguage(item.value);
+                changeLanguage(item.value);
+              }}
+              className={`language ${item.value === language ? "active" : ""}`}
+              style={{
+                borderRight: item.name !== "SL" ? "2px solid white" : "none",
+              }}
+            >
+              {item.name}
+            </div>
+          ))}
+        </div>
+
         <div className="navItem_tranlate_container">
           <div className="navbar-items">
             <div className="plus-jakarta isNotOpen_container">
@@ -92,39 +118,6 @@ const Navbar = () => {
                 </div>
               ))}
             </div>
-          </div>
-
-          <div className="translate_container">
-            <div className="translateImageContainer">
-              <img
-                src={TranslateImage}
-                alt="google_translate_icon"
-                className="google_translate_image"
-              />
-            </div>
-            {/* <Translate /> */}
-            <select
-              onClick={(e) => changeLanguage(e.target.value)}
-              className="custom-select"
-              style={{
-                width: "100%",
-                backgroundColor: "transparent",
-                color: "white",
-              }}
-            >
-              <option style={{ color: "black" }} value="en">
-                English
-              </option>
-              <option style={{ color: "black" }} value="hn">
-                Hungarian
-              </option>
-              <option style={{ color: "black" }} value="gr">
-                Deutsch
-              </option>
-              <option style={{ color: "black" }} value="sl">
-                Slovak
-              </option>
-            </select>
           </div>
 
           <button className="navbar-toggle" onClick={toggleMenu}>

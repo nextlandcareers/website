@@ -6,44 +6,41 @@ import ServiceImage3 from "../../assets/serviceScreenImage3.jpeg";
 import ServiceImage4 from "../../assets/serviceScreenImage4.jpeg";
 import ServiceImage5 from "../../assets/serviceScreenImage5.jpeg";
 import ServiceImage6 from "../../assets/serviceScreenImage6.jpeg";
+import { useTranslation } from "react-i18next";
 
 const ServicesScreen = () => {
+  const { t } = useTranslation();
+
   const items = [
     {
       image: ServiceImage1,
-      heading: "Job Applications",
-      description:
-        "We assist job seekers in navigating the application process, ensuring their profiles stand out to potential employers and connecting them to the best employers suited for their profile and thus land  their dream job. Our team provides personalized support, from crafting compelling resumes to preparing for interviews.",
+      heading: t("serviceHeader1"),
+      description: t("serviceDesc1"),
     },
     {
       image: ServiceImage2,
-      heading: "Skill Enhancement Training",
-      description:
-        "We help you enhance your skills by the help of our specialised training programmes. Professionals may upskill and gain the latest industry standard skills and knowledge necessary to succeed in the european job market.",
+      heading: t("serviceHeader2"),
+      description: t("serviceDesc2"),
     },
     {
       image: ServiceImage3,
-      heading: "Language Training",
-      description:
-        "To help candidates in overcome language barriers, enhancing their communication skills, and increasing their employability in a varied European market, we provide extensive language training. Our classes are designed for different skill levels and are taught by knowledgeable instructors.",
+      heading: t("serviceHeader3"),
+      description: t("serviceDesc3"),
     },
     {
       image: ServiceImage4,
-      heading: "Visa Assistance",
-      description:
-        "Our professionals offer individualised advice and assistance, which streamlines and eases the visa application procedure. We keep up with the most recent immigration laws to provide fast and accurate guidance.",
+      heading: t("serviceHeader4"),
+      description: t("serviceDesc4"),
     },
     {
       image: ServiceImage5,
-      heading: "Onboarding & Check-in",
-      description:
-        "We provide a smooth transition for new hires through our standardized onboarding process, which includes orientation, paperwork and integration into their new positions and environments. Throughout the early phase of employment, our specialized team is accessible to answer any inquiries or concerns.",
+      heading: t("serviceHeader5"),
+      description: t("serviceDesc5"),
     },
     {
       image: ServiceImage6,
-      heading: "Accommodation Assistance",
-      description:
-        "Relocating for a job might be tough. We assist our applicants in finding suitable lodging, ensuring they have a pleasant and secure place to reside while they begin their new careers. Our network of housing partners offers a wide range of solutions to suit individual needs and tastes.",
+      heading: t("serviceHeader6"),
+      description: t("serviceDesc6"),
     },
   ];
   return (

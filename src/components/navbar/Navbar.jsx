@@ -4,12 +4,17 @@ import { useEffect, useState } from "react";
 import Translate from "../translate/Translate";
 import TranslateImage from "../../assets/translate.png";
 import "./navbar.css";
+import "../../i18n";
+import { useTranslation } from "react-i18next";
 
 const Navbar = () => {
   const location = useLocation();
   const [activeLink, setActiveLink] = useState(location.pathname);
   const [isScrolled, setIsScrolled] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
+  const [language, setLanguage] = useState("en");
+
+  const { t, i18n } = useTranslation();
 
   useEffect(() => {
     setActiveLink(location.pathname);
@@ -30,6 +35,10 @@ const Navbar = () => {
 
   const navigate = useNavigate();
 
+  const changeLanguage = (lang) => {
+    i18n.changeLanguage(lang);
+  };
+
   const items = [
     { name: "HOME PAGE", path: "/" },
     { name: "ABOUT US", path: "/about" },
@@ -37,6 +46,13 @@ const Navbar = () => {
     { name: "JOBS", path: "/jobs" },
     { name: "CLIENTS", path: "/clients" },
     { name: "CONTACT US", path: "/contact" },
+  ];
+
+  const languages = [
+    { name: "EN", value: "en" },
+    { name: "HU", value: "hn" },
+    { name: "DE", value: "gr" },
+    { name: "SL", value: "sl" },
   ];
 
   const handleScroll = () => {
@@ -61,9 +77,31 @@ const Navbar = () => {
       <div className="w-full flex flex-wrap items-center justify-between px-10 py-7">
         <Link to="/">
           <div>
-            <img src={NLClogo} alt="NLC_logo" className="w-[117px] h-[70px] nlc_logo_image_container" />
+            <img
+              src={NLClogo}
+              alt="NLC_logo"
+              className="w-[117px] h-[70px] nlc_logo_image_container"
+            />
           </div>
         </Link>
+
+        <div className="languagesContainer">
+          {languages.map((item, index) => (
+            <div
+              key={index}
+              onClick={() => {
+                setLanguage(item.value);
+                changeLanguage(item.value);
+              }}
+              className={`language ${item.value === language ? "active" : ""}`}
+              style={{
+                borderRight: item.name !== "SL" ? "2px solid white" : "none",
+              }}
+            >
+              {item.name}
+            </div>
+          ))}
+        </div>
 
         <div className="navItem_tranlate_container">
           <div className="navbar-items">
@@ -80,17 +118,6 @@ const Navbar = () => {
                 </div>
               ))}
             </div>
-          </div>
-
-          <div className="translate_container">
-            <div className="translateImageContainer">
-              <img
-                src={TranslateImage}
-                alt="google_translate_icon"
-                className="google_translate_image"
-              />
-            </div>
-            <Translate />
           </div>
 
           <button className="navbar-toggle" onClick={toggleMenu}>

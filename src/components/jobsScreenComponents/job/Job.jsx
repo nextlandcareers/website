@@ -5,8 +5,10 @@ import Earth from "../../../assets/earth.png";
 import Education from "../../../assets/education.png";
 import Translate from "../../../assets/translation.png";
 import Highlight from "../highlight/Highlight";
+import { useTranslation } from "react-i18next";
 
 const Job = ({ image, header, desc, exp, cntry, edu, tran }) => {
+  const { t } = useTranslation();
   return (
     <div className="jobsScreen__job__container">
       <div
@@ -44,33 +46,21 @@ const Job = ({ image, header, desc, exp, cntry, edu, tran }) => {
       <div className="jobsScreen__seperator__line"></div>
 
       <div className="jobsScreen__job__highllights__container">
-        <Highlight image={Star} heading={"Experience"} info={exp} />
-        <Highlight image={Earth} heading={"Country"} info={cntry} />
-        <Highlight
-          image={Education}
-          heading={"Educational Qualification"}
-          info={edu}
-        />
-        <Highlight image={Translate} heading={"Language Skills"} info={tran} />
+        <Highlight image={Star} heading={t("experience")} info={exp} />
+        <Highlight image={Earth} heading={t("country")} info={cntry} />
+        <Highlight image={Education} heading={t("eduQuali")} info={edu} />
+        <Highlight image={Translate} heading={t("lang")} info={tran} />
       </div>
 
       <div className="jobsScreen__job__highllights_small_screen_container">
         <div className="jobsScreen__job__highllights__container1_small_screen">
-          <Highlight image={Star} heading={"Experience"} info={exp} />
-          <Highlight image={Earth} heading={"Country"} info={cntry} />
+          <Highlight image={Star} heading={t("experience")} info={exp} />
+          <Highlight image={Earth} heading={t("country")} info={cntry} />
         </div>
 
         <div className="jobsScreen__job__highllights__container2_small_screen">
-          <Highlight
-            image={Education}
-            heading={"Educational Qualification"}
-            info={edu}
-          />
-          <Highlight
-            image={Translate}
-            heading={"Language Skills"}
-            info={tran}
-          />
+          <Highlight image={Education} heading={t("eduQuali")} info={edu} />
+          <Highlight image={Translate} heading={t("lang")} info={tran} />
         </div>
       </div>
     </div>

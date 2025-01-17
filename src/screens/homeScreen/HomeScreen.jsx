@@ -48,24 +48,21 @@ const HomeScreen = () => {
       // image: Rating1,
       profileName: "Arun Alex",
       // profileDescription: "Lorem ipsum dolor sit amet",
-      ratingDescription:
-        "They are doing a wonderful job in giving such services to common man like us, our life changed completely.",
+      ratingDescription: t("rating1"),
       ratingValue: 4.5,
     },
     {
       // image: Rating2,
       profileName: "Vipin das",
       // profileDescription: "Lorem ipsum dolor sit amet",
-      ratingDescription:
-        "Thanks to the team, long dream of work in europe got fulfilled, good service.",
+      ratingDescription: t("rating2"),
       ratingValue: 5,
     },
     {
       // image: Rating3,
       profileName: "Joseph Abin",
       // profileDescription: "Lorem ipsum dolor sit amet",
-      ratingDescription:
-        "Throughout the entire process, i got clear guidance and support. They made the entire process seamless and stress-free. I am very grateful for their professional and efficient service, and I highly recommend to all.",
+      ratingDescription: t("rating3"),
       ratingValue: 5,
     },
   ];
@@ -98,8 +95,8 @@ const HomeScreen = () => {
 
       {/* Sector */}
       <div className="setcorTextContainer">
-        <div className="topText plus-jakarta">TOP</div>
-        <div className="sectorText plus-jakarta">SECTORS</div>
+        <div className="topText plus-jakarta">{t("top")}</div>
+        <div className="sectorText plus-jakarta">{t("sector")}</div>
       </div>
 
       <div className="sectorContainer mb-12">
@@ -125,15 +122,15 @@ const HomeScreen = () => {
           </div>
 
           <Link to="/contact">
-            <Button title={"Contact Us"} />
+            <Button title={t("contactUS")} />
           </Link>
         </div>
       </div>
 
       {/* Services */}
       <div className="setcorTextContainer">
-        <div className="topText plus-jakarta">OUR</div>
-        <div className="sectorText plus-jakarta">SERVICES</div>
+        <div className="topText plus-jakarta">{t("our")}</div>
+        <div className="sectorText plus-jakarta">{t("service")}</div>
       </div>
 
       <div className="servicesContainer">
@@ -144,8 +141,8 @@ const HomeScreen = () => {
 
       {/* Trusted By */}
       <div className="trustedTextContainer">
-        <div className="trustedTopText plus-jakarta">TRUSTED BY</div>
-        <div className="trustedSubText plus-jakarta"> MANY COMPANIES</div>
+        <div className="trustedTopText plus-jakarta">{t("trustedBy")}</div>
+        <div className="trustedSubText plus-jakarta">{t("manyCompanies")}</div>
       </div>
 
       <div className="trustedByContainer">

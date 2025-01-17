@@ -49,7 +49,7 @@ const ContactScreen = () => {
             <div className="conatctUsImage_gradient">
               <div className="contactUs_items_container plus-jakarta">
                 <div className="items_container">
-                  <div className="item_heading_Conatinar">Contact</div>
+                  <div className="item_heading_Conatinar">{t("conta")}</div>
                   <div className="contacts_container">
                     <div className="emailContainer">
                       <img src={Phone} alt="phone_icon" className="mail_Img" />
@@ -65,7 +65,7 @@ const ContactScreen = () => {
                   </div>
                 </div>
                 <div className="address_container">
-                  <div className="item_heading_Conatinar">Address</div>
+                  <div className="item_heading_Conatinar">{t("address")}</div>
                   <div className="item_descr_container">
                     <div>NEXTLAND CAREERS</div>
                     <div>
@@ -104,8 +104,8 @@ const ContactScreen = () => {
         <div className="lets_talk_gradient_container">
           <div className="lets_talk_container plus-jakarta">
             <div className="lets_talk_text_container">
-              <div>Have more questions?</div>
-              <div>Let's talk</div>
+              <div>{t("moreQues")}</div>
+              <div>{t("letsTalk")}</div>
             </div>
 
             <div
@@ -113,7 +113,7 @@ const ContactScreen = () => {
               className="lets_talk_button_container"
             >
               <img src={Mail} alt="mail_icon" className="mail_icon_image" />
-              <div className="button_text">Write to us</div>
+              <div className="button_text">{t("writeTo")}</div>
             </div>
           </div>
         </div>

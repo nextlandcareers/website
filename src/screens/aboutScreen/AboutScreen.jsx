@@ -51,9 +51,12 @@ const AboutScreen = () => {
 
       <div className="aboutScreen__QuoteContainer plus-jakarta">
         <div className="aboutScreen__quote">
-          If <span className="aboutScreen__boldText">opportunity</span> doesn't{" "}
-          <span className="aboutScreen__italicText">knock</span>, build a{" "}
-          <span className="aboutScreen__italicText">door</span>.
+          {t("if")}{" "}
+          <span className="aboutScreen__boldText">{t("opportunity")}</span>{" "}
+          {t("doesn't")}{" "}
+          <span className="aboutScreen__italicText">{t("knock")}</span>,{" "}
+          {t("build")}{" "}
+          <span className="aboutScreen__italicText">{t("door")}</span>.
         </div>
         <div className="aboutScreen__author">
           Milton <span className="aboutScreen__boldText">Berle</span>

@@ -45,7 +45,7 @@ const ServicesScreen = () => {
   ];
   return (
     <div className="serviceScreen__servicesMainContainer">
-      <div className="serviceScreeen__header">Services we offer</div>
+      <div className="serviceScreeen__header">{t("servicesWeOffer")}</div>
       <div className="serviceScreen__topLinearGradientContainer"></div>
       {items.map((item, index) => (
         <ServiceItem

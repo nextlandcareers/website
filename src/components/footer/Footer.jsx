@@ -2,9 +2,12 @@ import "./footer.css";
 import NLClogo from "../../assets/NLC logo footer.png";
 import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 const Footer = () => {
   const location = useLocation();
+  const { t } = useTranslation();
+
   return (
     <div
       className={`footerContainer ${
@@ -20,7 +23,7 @@ const Footer = () => {
         <div className="flex flex-col space-y-4">
           <Link to="/privacy_policy">
             <div className="plus-jakarta cursor-pointer tracking-wide hover:font-semibold">
-              Privacy Policy
+              {t("privacyPolicy")}
             </div>
           </Link>
 

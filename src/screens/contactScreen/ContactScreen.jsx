@@ -54,8 +54,8 @@ const ContactScreen = () => {
                     <div className="emailContainer">
                       <img src={Phone} alt="phone_icon" className="mail_Img" />
                       <div className="contactScreen__number__container">
-                        <div>+91 88486 06589</div>
-                        <div>+91 89219 03274</div>
+                        <div>+91 75580 17771</div>
+                        <div>+91 48129 60319</div>
                       </div>
                     </div>
                     <div className="emailContainer">

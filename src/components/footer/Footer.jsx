@@ -40,8 +40,8 @@ const Footer = () => {
 
         <div className="flex flex-col space-y-4 items-center">
           <div className="plus-jakarta tracking-wide">
-            <div>+91 88486 06589</div>
-            <div>+91 89219 03274</div>
+            <div>+91 75580 17771</div>
+            <div>+91 48129 60319</div>
           </div>
           <div className="plus-jakarta tracking-wide">
             contact@nextlandcareers.com

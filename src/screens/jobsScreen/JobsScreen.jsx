@@ -5,6 +5,8 @@ import JobImg3 from "../../assets/bakery (1).jpg";
 import JobImg4 from "../../assets/maintenance (1).jpg";
 import JobImg5 from "../../assets/pipe (1).jpg";
 import JobImg6 from "../../assets/welder (1).jpg";
+import JobImg7 from "../../assets/nurse.jpg";
+import JobImg8 from "../../assets/butcher.jpg";
 import PlacedImg from "../../assets/placed__img.png";
 import Job from "../../components/jobsScreenComponents/job/Job";
 import { useTranslation } from "react-i18next";
@@ -27,17 +29,17 @@ const JobsScreen = () => {
       header: t("jobHeader2"),
       desc: t("jobDesc2"),
       exp: t("3yr"),
-      cntry: t("germany"),
-      edu: t("engineeDegree"),
+      cntry: t("gerHunSlo"),
+      edu: "Degree / Diploma",
       tran: t("EnglishBasicGerman"),
     },
     {
       image: JobImg3,
       header: t("jobHeader3"),
       desc: t("jobDesc3"),
-      exp: t("2yr"),
+      exp: t("1yr"),
       cntry: t("germany"),
-      edu: "Bsc in Hotel Management",
+      edu: "BSC Degree",
       tran: t("EnglishBasicGerman"),
     },
     {
@@ -54,8 +56,8 @@ const JobsScreen = () => {
       header: t("jobHeader5"),
       desc: t("jobDesc5"),
       exp: t("5yr"),
-      cntry: t("germanyHungary"),
-      edu: "Dipolma / Deg in Mechanical Engineering",
+      cntry: t("gerHunSlo"),
+      edu: "Degree / Diploma",
       tran: t("EnglishBasicGerman"),
     },
     {
@@ -63,9 +65,27 @@ const JobsScreen = () => {
       header: t("jobHeader6"),
       desc: t("jobDesc6"),
       exp: t("5yr"),
-      cntry: t("germanyHungary"),
-      edu: "Dipolma / Deg in Mechanical Engineering",
+      cntry: t("gerHunSlo"),
+      edu: "Degree / Diploma",
       tran: t("EnglishBasicGerman"),
+    },
+    {
+      image: JobImg7,
+      header: t("jobHeader7"),
+      desc: t("jobDesc7"),
+      exp: t("1yr"),
+      cntry: t("germany"),
+      edu: "BSC Degree",
+      tran: t("B2"),
+    },
+    {
+      image: JobImg8,
+      header: t("jobHeader8"),
+      desc: t("jobDesc8"),
+      exp: t("1yr"),
+      cntry: t("germany"),
+      edu: "Degree / Diploma",
+      tran: t("basic"),
     },
   ];
   return (

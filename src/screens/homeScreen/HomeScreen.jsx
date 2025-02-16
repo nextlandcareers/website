@@ -46,21 +46,21 @@ const HomeScreen = () => {
   const ratingItems = [
     {
       // image: Rating1,
-      profileName: "Arun Alex",
+      profileName: "James",
       // profileDescription: "Lorem ipsum dolor sit amet",
       ratingDescription: t("rating1"),
       ratingValue: 4.5,
     },
     {
       // image: Rating2,
-      profileName: "Vipin das",
+      profileName: "Alex Sebastian",
       // profileDescription: "Lorem ipsum dolor sit amet",
       ratingDescription: t("rating2"),
       ratingValue: 5,
     },
     {
       // image: Rating3,
-      profileName: "Joseph Abin",
+      profileName: "Tom mathew",
       // profileDescription: "Lorem ipsum dolor sit amet",
       ratingDescription: t("rating3"),
       ratingValue: 5,

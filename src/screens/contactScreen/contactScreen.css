@@ -144,6 +144,22 @@
   height: 20px;
 }
 
+.insta_Img {
+  width: 30px;
+  height: 30px;
+  margin-left: -5px;
+}
+
+.fb_Img {
+  width: 30px;
+  height: 23px;
+  margin-left: -5px;
+}
+
+.insta_txt {
+  margin-left: -5px;
+}
+
 .item_descr_container {
   font-size: 14px;
   font-weight: 300;
@@ -577,6 +593,10 @@
 }
 
 @media (max-width: 455px) {
+  .items_container{
+    margin-top: 50px;
+  }
+
   .lets_talk_gradient_container {
     height: 200px;
   }
@@ -635,6 +655,7 @@
   .ques_header_container {
     font-size: 25px;
     line-height: 30px;
+    margin-top: 15px;
   }
 }
 

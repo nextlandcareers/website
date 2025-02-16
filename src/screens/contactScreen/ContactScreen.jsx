@@ -2,6 +2,8 @@ import "./contactScreen.css";
 import ContactMainImage from "../../assets/conatctUsMain (1).jpg";
 import Phone from "../../assets/phoneIcon.png";
 import Mail from "../../assets/mailIcon.png";
+import Insta from "../../assets/insta.png";
+import Fb from "../../assets/fb.png";
 import Question from "../../components/conatctUsScreenComponents/question/Question";
 import { useCallback } from "react";
 import { useTranslation } from "react-i18next";
@@ -12,6 +14,20 @@ const ContactScreen = () => {
   const handleLetsTalkButtonClick = () => {
     const mailtoLink = "mailto:contact@nextlandcareers.com";
     window.open(mailtoLink, "_blank");
+  };
+
+  const handleInstaClick = () => {
+    window.open(
+      "https://www.instagram.com/nextlandcareers?igsh=MXRhcHRhNzY4anM5bQ==",
+      "_blank"
+    );
+  };
+
+  const handleFbClick = () => {
+    window.open(
+      "https://www.facebook.com/share/1H3iC8uYhn/?mibextid=wwXIfr",
+      "_blank"
+    );
   };
 
   const mapSrc =
@@ -61,6 +77,24 @@ const ContactScreen = () => {
                     <div className="emailContainer">
                       <img src={Mail} alt="main_icon" className="mail_Img" />
                       <div>contact@nextlandcareers.com</div>
+                    </div>
+
+                    <div
+                      onClick={handleInstaClick}
+                      className="emailContainer"
+                      style={{ cursor: "pointer" }}
+                    >
+                      <img src={Insta} alt="main_icon" className="insta_Img" />
+                      <div className="insta_txt">NEXTLAND CAREERS</div>
+                    </div>
+
+                    <div
+                      onClick={handleFbClick}
+                      className="emailContainer"
+                      style={{ cursor: "pointer" }}
+                    >
+                      <img src={Fb} alt="main_icon" className="fb_Img" />
+                      <div className="insta_txt">NEXTLAND CAREERS</div>
                     </div>
                   </div>
                 </div>

@@ -30,16 +30,22 @@ const ContactScreen = () => {
     );
   };
 
-  const mapSrc =
-    "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31464.74379900874!2d76.52490841417325!3d9.673096954949061!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b07d37b3d578d7d%3A0xeaff56dafc9d877d!2sEttumanoor%2C%20Kerala!5e0!3m2!1sen!2sin!4v1720594283637!5m2!1sen!2sin";
+  const handleMapClick = () => {
+    window.open(
+      "https://www.google.com/maps/dir//Nextland+careers,+Focus+Tower,+Parolickal+Rd,+Ettumanoor,+Kerala+686562/@9.6591369,76.5449604,14.85z/data=!4m9!4m8!1m0!1m5!1m1!1s0xa0a64d5f22c5b51:0x85d07e07ee3b8e0f!2m2!1d76.5501231!2d9.658919!3e0?hl=en&entry=ttu&g_ep=EgoyMDI1MDMwNC4wIKXMDSoASAFQAw%3D%3D",
+      "_blank"
+    );
+  };
 
+  const mapSrc =
+    "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15733.0211399009!2d76.54548814282224!3d9.65921514871079!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa0a64d5f22c5b51%3A0x85d07e07ee3b8e0f!2sNextland%20careers!5e0!3m2!1sen!2sin!4v1741437874397!5m2!1sen!2sin";
   const renderMap = useCallback(() => {
     return (
       <iframe
         src={mapSrc}
         width="100%"
         height="100%"
-        style={{ border: "0", borderRadius: "25px" }}
+        style={{ border: "0", borderRadius: "25px", pointerEvents: "none" }}
         allowFullScreen=""
         loading="lazy"
         referrerPolicy="no-referrer-when-downgrade"
@@ -109,7 +115,9 @@ const ContactScreen = () => {
                     <div>Kottayam, Kerala-686562, India</div>
                   </div>
                 </div>
-                <div className="map_container">{renderMap()}</div>
+                <div onClick={handleMapClick} className="map_container">
+                  {renderMap()}
+                </div>
               </div>
             </div>
           </div>

@@ -110,6 +110,7 @@
   border-radius: 30px;
   border-width: 7px;
   border-color: rgba(0, 0, 0, 0.4);
+  cursor: pointer;
 }
 
 .item_heading_Conatinar {

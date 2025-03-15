@@ -40,12 +40,12 @@ const Navbar = () => {
   };
 
   const items = [
-    { name: "HOME PAGE", path: "/" },
-    { name: "ABOUT US", path: "/about" },
-    { name: "SERVICES", path: "/services" },
-    { name: "JOBS", path: "/jobs" },
-    { name: "CLIENTS", path: "/clients" },
-    { name: "CONTACT US", path: "/contact" },
+    { name: t("homePage").toUpperCase(), path: "/" },
+    { name: t("about").toUpperCase(), path: "/about" },
+    { name: t("services").toUpperCase(), path: "/services" },
+    { name: t("jobs").toUpperCase(), path: "/jobs" },
+    { name: t("clients").toUpperCase(), path: "/clients" },
+    { name: t("contact").toUpperCase(), path: "/contact" },
   ];
 
   const languages = [

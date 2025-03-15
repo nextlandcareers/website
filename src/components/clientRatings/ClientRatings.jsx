@@ -2,9 +2,11 @@ import "./clientRatings.css";
 import NextIcon from "../../assets/ratingNext.png";
 import RatingCard from "../ratingCard/RatingCard";
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 
 const ClientRatings = ({ items }) => {
   const [currentPage, setCurrentPage] = useState(0);
+  const { t } = useTranslation()
 
   const itemsPerPage = 3;
 
@@ -20,8 +22,8 @@ const ClientRatings = ({ items }) => {
   return (
     <div className="ratingsContainer">
       <div className="ratingsHeader plus-jakarta ">
-        <div>HERE FROM</div>
-        <div className="span">OUR HAPPY CLIENTS</div>
+        <div>{t("hereFrom")}</div>
+        <div className="span">{t("happyClients")}</div>
       </div>
       <div className="ratingCardContainer">
         {currentItems.map((item, index) => (
